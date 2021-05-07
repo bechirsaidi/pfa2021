@@ -17,6 +17,19 @@ import { StudentComponent } from './student/student.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatTableModule} from '@angular/material/table';
+import { CartComponent } from './cart/cart.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+// MDB Angular Free
+import { CheckboxModule, WavesModule, ButtonsModule, InputsModule, IconsModule, CardsModule } from 'angular-bootstrap-md'
+
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { StatsCardComponent } from './stats-card/stats-card.component';
+import {MatTooltipModule} from '@angular/material/tooltip';
+
+import { StatsCard2Component } from './stats-card2/stats-card2.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './Signup/signup.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 const routes : Routes = [
@@ -27,7 +40,13 @@ const routes : Routes = [
   {path : 'contact', component: ContactComponent},
   {path : '404', component: NotfoundComponent},
   {path:'student',component:StudentComponent},
+  {path:'cart',component:CartComponent},
+  {path:'admin',component:AdminDashboardComponent},
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
+
   { path : '**' , redirectTo : '404' }
+
 ];
 @NgModule({
   declarations: [
@@ -39,7 +58,13 @@ const routes : Routes = [
     CoursesComponent,
     ContactComponent,
     NotfoundComponent,
-    StudentComponent
+    StudentComponent,
+    CartComponent,
+    AdminDashboardComponent,
+    StatsCardComponent,
+    StatsCard2Component,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +75,15 @@ const routes : Routes = [
     RouterModule.forRoot(routes),
     MatCheckboxModule,
     MatSidenavModule,
-    MatTableModule
+    MatTableModule,
+    MDBBootstrapModule.forRoot(),
+    MatTooltipModule,
+    FormsModule, ReactiveFormsModule,
+    CheckboxModule, WavesModule, ButtonsModule, InputsModule, IconsModule, CardsModule,
+
+
+    
+
   ],
   providers: [],
   bootstrap: [AppComponent]
