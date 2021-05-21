@@ -1,0 +1,125 @@
+
+
+
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3 bg-dark sidenav " >
+        <div class="cont">
+          <hr>
+          <h3>Welcome Rawand !</h3>
+          <hr>
+          <button type="button" class="btn link btn-info">Dashboard</button><br>
+          <button type="button" class="btn link btn-info">Mycourses</button><br>
+
+          <button type="button" class="btn link  btn-info">compte</button><br>
+          <button type="button" class="btn link  btn-info">Messages</button><br>
+          <button type="button" class="btn link btn-info">Contact</button><br>
+        </div>
+      </div>
+    
+    
+    
+  
+      <div class="col-lg-9 content">
+        <div class="container-fluid">
+              <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+                <a class="navbar-brand" href="#"><i style="color: black;"  class="bi bi-search"></i></a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                   <li>
+                    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 nav-item">
+                      <input class="form-control form-control-dark" placeholder="Search..." type="search"/>
+                    </form>
+                   </li>
+                   
+                  </ul>
+                  <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                    <button type="button" class="btn btn-warning" routerLink="/formateur-dash/newcourse">Create new courses</button>
+
+                  </form>
+
+                  <div class="text-end">
+                    <div class="image">
+                      <img  src="../../assets/img/user.jpg" class="rounded" alt="...">
+                    </div>
+                  </div>
+                </div>
+              </nav>
+              
+        
+  
+  
+  
+          <div class="row row1">
+            <div class="col-md-4"><div class="card cd text-white bg-warning mb-3" style="max-width: 18rem;">
+              <div class="card-body">
+                <div class="top">
+                <h5 class="card-title">Revenue</h5>
+                <i class=" icon bi bi-list-task"></i>
+              </div>
+              <div class="nb"><h1>3</h1></div>
+              </div>
+            </div></div>
+            <div class="col-md-4"><div class="card cd text-white bg-info mb-3" style="max-width: 18rem;">
+              <div class="card-body">
+                <div class="top">
+                <h5 class="card-title">STUDENTS ENROLLMENTS
+
+                </h5>
+                <i class="icon bi bi-list-check"></i>
+              </div>
+              <div class="nb"><h1>17</h1></div>
+              </div>
+            </div></div>
+            <div class="col-md-4"><div class="card cd bg-light mb-3" style="max-width: 18rem;">
+              <div class="card-body">
+                <div class="top">
+                <h5 class="card-title">COURSES RATING
+                </h5>
+                <i class="icon bi bi-bar-chart-line"></i>
+              </div>
+              <div class="nb"><h1>11</h1></div>
+              </div>
+            </div></div>
+  
+          </div>
+  
+          <div class="row">
+            <div class="col">
+              <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+                <!--- Note that these columns can be defined in any order.
+                      The actual rendered columns are set as a property on the row definition" -->
+           
+                <!-- Position Column -->
+                <ng-container matColumnDef="course">
+                  <th mat-header-cell *matHeaderCellDef> course </th>
+                  <td mat-cell *matCellDef="let element"> {{element.course}} </td>
+                </ng-container>
+              
+                <!-- Name Column -->
+                <ng-container matColumnDef="sales">
+                  <th mat-header-cell *matHeaderCellDef> sales </th>
+                  <td mat-cell *matCellDef="let element"> {{element.sales}} </td>
+                </ng-container>
+              
+                <!-- Weight Column -->
+                <ng-container matColumnDef="amount">
+                    <th mat-header-cell *matHeaderCellDef> Amount </th>
+
+                 
+                    <td mat-cell *matCellDef="let element"> {{element.amount}} D </td>
+                </ng-container>
+              
+                <!-- Symbol Column -->
+                
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </div>

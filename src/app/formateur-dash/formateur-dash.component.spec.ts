@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StatsCardComponent } from './stats-card.component';
+import { FormateurDashComponent } from './formateur-dash.component';
 
-describe('StatsCardComponent', () => {
-  let component: StatsCardComponent;
-  let fixture: ComponentFixture<StatsCardComponent>;
+describe('FormateurDashComponent', () => {
+  let component: FormateurDashComponent;
+  let fixture: ComponentFixture<FormateurDashComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StatsCardComponent ]
+      declarations: [ FormateurDashComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(StatsCardComponent);
+    fixture = TestBed.createComponent(FormateurDashComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

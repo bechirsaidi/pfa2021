@@ -18,18 +18,19 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatTableModule} from '@angular/material/table';
 import { CartComponent } from './cart/cart.component';
-import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 // MDB Angular Free
 import { CheckboxModule, WavesModule, ButtonsModule, InputsModule, IconsModule, CardsModule } from 'angular-bootstrap-md'
 
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { StatsCardComponent } from './stats-card/stats-card.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
 
-import { StatsCard2Component } from './stats-card2/stats-card2.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './Signup/signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormateurDashComponent } from './formateur-dash/formateur-dash.component';
+import { NewCourseComponent } from './new-course/new-course.component';
+import {MatStepperModule} from '@angular/material/stepper';
+import { MaterialFileInputModule } from 'ngx-material-file-input';
 
 
 const routes : Routes = [
@@ -41,9 +42,11 @@ const routes : Routes = [
   {path : '404', component: NotfoundComponent},
   {path:'student',component:StudentComponent},
   {path:'cart',component:CartComponent},
-  {path:'admin',component:AdminDashboardComponent},
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
+  { path: 'formateur-dash', component:FormateurDashComponent  },
+  { path: 'formateur-dash/newcourse', component:NewCourseComponent  },
+
 
   { path : '**' , redirectTo : '404' }
 
@@ -60,11 +63,11 @@ const routes : Routes = [
     NotfoundComponent,
     StudentComponent,
     CartComponent,
-    AdminDashboardComponent,
-    StatsCardComponent,
-    StatsCard2Component,
+   
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    FormateurDashComponent,
+    NewCourseComponent
   ],
   imports: [
     BrowserModule,
@@ -80,6 +83,8 @@ const routes : Routes = [
     MatTooltipModule,
     FormsModule, ReactiveFormsModule,
     CheckboxModule, WavesModule, ButtonsModule, InputsModule, IconsModule, CardsModule,
+    MatStepperModule,
+    MaterialFileInputModule
 
 
     
